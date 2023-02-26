@@ -1,7 +1,7 @@
 const Button = (props) => {
-    const { children } = props
+    const { children,...rest } = props
     return (
-        <button type="button">{children}</button>
+        <button type="button" {...rest}>{children}</button>
     )
 }
 

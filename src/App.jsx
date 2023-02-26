@@ -1,13 +1,13 @@
 import './App.css'
-import TodoList from './pages/TodoList/TodoList'
+import TodoListContainer from './containers/TodoListContainer'
 
 function App() {
 
   return (
     <div className="App">
-      <TodoList />
+      <TodoListContainer />
     </div>
   )
 }
 
-export default App
+export default App;
