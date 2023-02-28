@@ -1,6 +1,8 @@
+import Navigation from "./Navigation/Navigation";
+
 const Aside = () => {
     return (
-        <div>Aside</div>
+        <Navigation />
     )
 }
 

@@ -5,7 +5,7 @@ export const addTodo = (todo) => {
     const id = v4()
     return { type: ADD_TODO, todo, id }
 }
-export const removeTodo = () => {
+export const removeTodo = (id) => {
     return { type: REMOVE_TODO, id }
 
 }

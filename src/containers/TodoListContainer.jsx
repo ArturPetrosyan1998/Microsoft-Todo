@@ -8,7 +8,7 @@ const TodoListContainer = () => {
         dispatch(addTodo(todo))
     }
     const remove = (id) => {
-        dispatch(removeTodo)
+        dispatch(removeTodo(id))
     }
     return <TodoList add={add} remove={remove}/>
 }
