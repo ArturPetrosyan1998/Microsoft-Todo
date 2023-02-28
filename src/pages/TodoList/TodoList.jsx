@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import Input from "../../components/Input/Input";
 
-const TodoList = ({ add, remove, id }) => {
+const TodoList = ({ add, remove, important }) => {
     const [text, setText] = useState('')
     const todos = useSelector((state) => state.todos)
     const onChange = ({ currentTarget: { value } }) => {
@@ -13,6 +13,9 @@ const TodoList = ({ add, remove, id }) => {
     }
     const onRemove = (id) => {
         remove(id)
+    }
+    const onImportant = (importantId,checked) => {
+        important(importantId,checked)
     }
     return (
         <div>
@@ -25,7 +28,11 @@ const TodoList = ({ add, remove, id }) => {
                         <button onClick={() => {
                             onRemove(item.id)
                         }}>Remove</button>
-                        <input type="checkbox"/>
+                        <input type="checkbox" onChange={(e) => {
+                            const checked = e.target.checked
+                            const importantId = item.id
+                            onImportant(importantId,checked)
+                        }}/>
                     </div>
                 )
             })

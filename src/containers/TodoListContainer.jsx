@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import TodoList from "../pages/TodoList/TodoList"
-import { addTodo, removeTodo } from "../redux/actions/todo";
+import { addImportantTodo, addTodo, removeTodo } from "../redux/actions/todo";
 
 const TodoListContainer = () => {
     const dispatch = useDispatch();
@@ -10,7 +10,10 @@ const TodoListContainer = () => {
     const remove = (id) => {
         dispatch(removeTodo(id))
     }
-    return <TodoList add={add} remove={remove}/>
+    const important = (importantId,checked) => {
+        dispatch(addImportantTodo(importantId,checked))
+    }
+    return <TodoList add={add} remove={remove} important={important}/>
 }
 
 export default TodoListContainer;

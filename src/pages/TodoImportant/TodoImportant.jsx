@@ -1,7 +1,20 @@
+import { useSelector } from "react-redux";
+
+
 const TodoImportant = () => {
-    return(
+    const todos = useSelector((state) => {
+        return state.todos.filter((item) => {
+            return item.isImportant === true
+        })
+    })
+    console.log(todos);
+    return (
         <div>
-            Important
+            {todos.map((item) => {
+              return (
+                <h2 key={item.id}>{item.todo}</h2>
+              )
+            })}
         </div>
     )
 }
