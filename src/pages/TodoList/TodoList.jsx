@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
-import { getTodos } from "../../redux/selectors/getTodos";
 
 const TodoList = ({ add, remove, id }) => {
     const [text, setText] = useState('')
@@ -13,18 +11,21 @@ const TodoList = ({ add, remove, id }) => {
     const onAdd = () => {
         add(text)
     }
-    const onRemove = () => {
-        remove()
+    const onRemove = (id) => {
+        remove(id)
     }
     return (
         <div>
             <Input onChange={onChange} />
             <button onClick={onAdd}>Add</button>
-            {todos.map((item,index) => {
+            {todos.map((item, index) => {
                 return (
                     <div key={index}>
                         {item.todo}
-                        <button onClick={onRemove}>Remove</button>
+                        <button onClick={() => {
+                            onRemove(item.id)
+                        }}>Remove</button>
+                        <input type="checkbox"/>
                     </div>
                 )
             })
