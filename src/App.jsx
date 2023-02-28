@@ -11,12 +11,10 @@ function App() {
     <div className="App">
       <Aside />
       <Routes>
-        <Route path='/important' element={<TodoImportant />}/>
-        <Route path='/deleted' element={<TodoDeleted/>}/>
-        <Route path='/complited' element={<TodoList/>}/>
-
+        <Route path='/important' element={<TodoImportant />} />
+        <Route path='/deleted' element={<TodoDeleted />} />
+        <Route path='/' element={<TodoListContainer />} />
       </Routes>
-      <TodoListContainer />
     </div>
   )
 }
