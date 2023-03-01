@@ -1,0 +1,53 @@
+.inp {
+    width: 90%;
+    height: 30px;
+}
+
+
+.divTodo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.complitedTodo {
+    text-decoration: line-through;
+    font-size: 20px;
+}
+
+.notComplited {
+    font-size: 20px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-right: 10px;
+    }
+}
+
+.bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+
+    button {
+        width: 100px;
+
+    }
+}
+
+.container {
+    width: calc(100% - 400px);
+    height: 100vh;
+    position: relative;
+}

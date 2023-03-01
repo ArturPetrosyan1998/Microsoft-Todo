@@ -1,5 +1,5 @@
 import { v4 } from "uuid";
-import { ADD_IMPORTANT, ADD_TODO, REMOVE_TODO } from "../reducers/todoReducer";
+import { ADD_COMPLITED, ADD_IMPORTANT, ADD_TODO, REMOVE_TODO } from "../reducers/todoReducer";
 
 export const addTodo = (todo) => {
     const id = v4()
@@ -12,5 +12,9 @@ export const removeTodo = (id) => {
 
 export const addImportantTodo = (importantId, checked) => {
     const importantTodo = checked
-    return { type: ADD_IMPORTANT, importantId,importantTodo, checked }
+    return { type: ADD_IMPORTANT, importantId, importantTodo, checked }
+}
+
+export const addComplitedTodo = (complitedId) => {
+    return { type: ADD_COMPLITED ,complitedId}
 }

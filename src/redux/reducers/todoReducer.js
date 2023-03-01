@@ -1,9 +1,11 @@
 export const ADD_TODO = "ADD_TODO";
 export const REMOVE_TODO = "REMOVE_TODO"
-export const ADD_IMPORTANT = "ADD_IMPORTANT"
-const toDoReducer = (state = [], { type, todo, id, importantId, checked, importantTodo } = {}) => {
+export const ADD_IMPORTANT = "ADD_IMPORTANT";
+export const ADD_COMPLITED = "ADD_COMPLITED";
+const toDoReducer = (state = [], { type, todo, id, importantId, checked, complitedId } = {}) => {
+    console.log(state);
     switch (type) {
-        case ADD_TODO: return [...state, { todo, id, isImportant : false }]
+        case ADD_TODO: return [...state, { todo, id, isImportant: null, isComplited: null }]
         case REMOVE_TODO: return state.filter((item) => item.id !== id);
         case ADD_IMPORTANT: return state.map((item) => {
             if (item.id === importantId) {
@@ -11,6 +13,11 @@ const toDoReducer = (state = [], { type, todo, id, importantId, checked, importa
             } else {
                 return { ...item }
             }
+        })
+        case ADD_COMPLITED: return state.map((item) => {
+            if (complitedId === item.id) {
+                return { ...item, isComplited: true }
+            } else { return { ...item } }
         })
         default: return state
     }

@@ -1,0 +1,11 @@
+.App {
+    display: flex;
+    margin: 0;
+    background-image: url(/src/assets/img/windowsImg.jpg);
+    background-position: center;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+}
