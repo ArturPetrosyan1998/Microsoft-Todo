@@ -3,10 +3,18 @@ import styles from './Navigation.module.scss'
 const Navigation = () => {
     return (
         <nav className={styles.nav}>
-            <NavLink to="/" className={styles.navLink}>Tasks</NavLink>
-            <NavLink to="/important" className={styles.navLink}>Important</NavLink>
-            <NavLink to='/complited' className={styles.navLink}>Complited</NavLink>
-            <NavLink to="/deleted" className={styles.navLink}>Deleted</NavLink>
+            <div className={styles.divNavlink}>
+                <NavLink to="/" className={styles.navLink}>Tasks</NavLink>
+            </div>
+            <div className={styles.divNavlink}>
+                <NavLink to="/important" className={styles.navLink}>Important</NavLink>
+            </div>
+            <div className={styles.divNavlink}>
+                <NavLink to='/complited' className={styles.navLink}>Complited</NavLink>
+            </div>
+            <div className={styles.divNavlink}>
+                <NavLink to="/deleted" className={styles.navLink}>Deleted</NavLink>
+            </div>
         </nav>
     )
 }

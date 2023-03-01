@@ -20,12 +20,14 @@
 
 .notComplited {
     font-size: 20px;
+    color: white;
+
 }
 
 .icons {
     display: flex;
     align-items: center;
-
+    color: white;
     p {
         margin-right: 10px;
     }
@@ -50,4 +52,11 @@
     width: calc(100% - 400px);
     height: 100vh;
     position: relative;
+}
+
+.todoContainer {
+     :hover {
+        background-color: black;
+        opacity: 0.3;
+     }
 }

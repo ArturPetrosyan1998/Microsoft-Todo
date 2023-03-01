@@ -4,7 +4,7 @@ import styles from "../Aside/Aside.module.scss"
 const Aside = () => {
     return (
         <aside className={styles.aside}>
-        <Navigation />
+            <Navigation />
         </aside>
     )
 }

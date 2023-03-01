@@ -3,7 +3,6 @@ export const REMOVE_TODO = "REMOVE_TODO"
 export const ADD_IMPORTANT = "ADD_IMPORTANT";
 export const ADD_COMPLITED = "ADD_COMPLITED";
 const toDoReducer = (state = [], { type, todo, id, importantId, checked, complitedId } = {}) => {
-    console.log(state);
     switch (type) {
         case ADD_TODO: return [...state, { todo, id, isImportant: null, isComplited: null }]
         case REMOVE_TODO: return state.filter((item) => item.id !== id);

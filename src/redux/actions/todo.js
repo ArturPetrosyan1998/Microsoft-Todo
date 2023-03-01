@@ -6,6 +6,7 @@ export const addTodo = (todo) => {
     return { type: ADD_TODO, todo, id }
 }
 export const removeTodo = (id) => {
+    console.log(id);
     return { type: REMOVE_TODO, id }
 
 }
