@@ -3,6 +3,7 @@ import TodoList from "../pages/TodoList/TodoList"
 import { addComplitedTodo, addImportantTodo, addTodo, removeTodo } from "../redux/actions/todo";
 
 const TodoListContainer = () => {
+    const todos = useSelector((state) => state.todos)
     const dispatch = useDispatch();
     const add = (todo) => {
         dispatch(addTodo(todo))

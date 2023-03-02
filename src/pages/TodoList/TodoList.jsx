@@ -6,7 +6,7 @@ import styles from './TodoList.module.scss'
 const TodoList = ({ add, remove, important, complited }) => {
     const [text, setText] = useState('')
     const todos = useSelector((state) => state.todos);
-    localStorage.setItem('all', JSON.stringify(todos))
+    localStorage.setItem('all', JSON.stringify(todos))  
     const onChange = ({ currentTarget: { value } }) => {
         setText(value)
     }
@@ -46,7 +46,7 @@ const TodoList = ({ add, remove, important, complited }) => {
                                     <p onClick={() => {
                                         onRemove(item.id)
                                     }}>X</p>
-                                    <input type="checkbox" onChange={(e) => {
+                                    <input type="checkbox" checked={item.isImportant} onChange={(e) => {
                                         const checked = e.target.checked
                                         const importantId = item.id
                                         onImportant(importantId, checked)
