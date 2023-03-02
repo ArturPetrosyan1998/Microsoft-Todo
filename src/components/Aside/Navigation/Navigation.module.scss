@@ -1,9 +1,7 @@
 .navLink {
     text-decoration: none;
-    color: black;
-    font-size: 26px;
-    margin-top: 20px;
-
+    color: white;
+    font-size:30px;
 }
 
 .navLink:hover {
@@ -14,7 +12,6 @@
     display: flex;
     flex-direction: column;
     width: 400px;
-
     :hover {
         color: white;
     }
@@ -22,7 +19,10 @@
 
 .divNavlink {
     height: 50px;
-
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 .divNavlink:hover {
     background-color: black;

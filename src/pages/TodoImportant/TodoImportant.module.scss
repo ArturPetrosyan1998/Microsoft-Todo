@@ -1,0 +1,30 @@
+.container {
+    width: calc(100% - 400px);
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.content:hover {
+    background-color: black;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; 
+    p {
+        margin-right: 10px;  
+    }
+}
+.imgRemove{
+    width: 30px;
+    height: 30px;
+}

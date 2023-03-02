@@ -6,16 +6,13 @@ export const addTodo = (todo) => {
     return { type: ADD_TODO, todo, id }
 }
 export const removeTodo = (id) => {
-    console.log(id);
     return { type: REMOVE_TODO, id }
-
 }
 
 export const addImportantTodo = (importantId, checked) => {
-    const importantTodo = checked
-    return { type: ADD_IMPORTANT, importantId, importantTodo, checked }
+    return { type: ADD_IMPORTANT, importantId, checked }
 }
 
 export const addComplitedTodo = (complitedId) => {
-    return { type: ADD_COMPLITED ,complitedId}
+    return { type: ADD_COMPLITED, complitedId }
 }
