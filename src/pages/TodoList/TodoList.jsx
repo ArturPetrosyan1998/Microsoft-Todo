@@ -8,13 +8,13 @@ const cx = classNames.bind(styles)
 const TodoList = ({ add, remove, important, complited }) => {
     const [text, setText] = useState('')
     const todos = useSelector((state) => state.todos);
-    console.log(todos);
     localStorage.setItem('all', JSON.stringify(todos))
     const onChange = ({ currentTarget: { value } }) => {
         setText(value)
     }
     const onAdd = () => {
         add(text)
+        setText('')
     }
     const onRemove = (id) => {
         remove(id)
@@ -24,12 +24,11 @@ const TodoList = ({ add, remove, important, complited }) => {
     }
     const onComplited = (e, complitedId) => {
         complited(complitedId)
-
     }
     return (
         <div className={styles.container} >
             <div className={styles.bottom}>
-                <Input onChange={onChange} className={styles.inp} />
+                <Input value={text} onChange={onChange} className={styles.inp} />
                 <button onClick={onAdd} className={styles.button} disabled={text === ''}>Add</button>
             </div>
             {
