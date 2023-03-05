@@ -1,7 +1,13 @@
-.container {
-    width: calc(100% - 400px);
-    height: 100vh;
-}
+
+    .container {
+        width: calc(100% - 400px);
+        height: 100vh;
+        background-image: url(/src/assets/img/windowsImg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow-y: scroll;
+    }
 
 .content {
     display: flex;

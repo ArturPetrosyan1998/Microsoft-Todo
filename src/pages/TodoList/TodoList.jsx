@@ -37,20 +37,20 @@ const TodoList = ({ add, remove, important, complited }) => {
                     return (
                         <div key={index} className={styles.todoContainer}>
                             <div className={styles.divTodo} >
-                                <div className={styles.content} onClick={(e) => {
+                                <div className={styles.content} >
+                                    <p onClick={(e) => {
                                         const complitedId = item.id;
                                         let className = e.target.className
                                         className === styles.content ?
                                             e.target.className = styles.contentComplited :
                                             e.target.className = styles.content;
                                         onComplited(e, complitedId)
-                                    }}>
-                                    <p>{item.todo}</p>
+                                    }}>{item.todo}</p>
                                     <div className={styles.icons}>
                                         <img src={imgRemove} alt="" className={styles.imgRemove} onClick={() => {
                                             onRemove(item.id)
                                         }} />
-                                        <input type="checkbox" checked={item.isImportant} onChange={(e) => {
+                                        <input type="checkbox" className={styles.checkbox} checked={item.isImportant} onChange={(e) => {
                                             const checked = e.target.checked
                                             const importantId = item.id
                                             onImportant(importantId, checked)
