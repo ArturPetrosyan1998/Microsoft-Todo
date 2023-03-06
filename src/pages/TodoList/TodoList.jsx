@@ -4,10 +4,11 @@ import Input from "../../components/Input/Input";
 import styles from './TodoList.module.scss';
 import imgRemove from "./assets/Icons/remove.svg"
 import classNames from "classnames/bind";
+import { getTodos } from "../../redux/selectors/getTodos";
 const cx = classNames.bind(styles)
 const TodoList = ({ add, remove, important, complited }) => {
     const [text, setText] = useState('')
-    const todos = useSelector((state) => state.todos);
+    const todos = useSelector((state) => getTodos(state));
     localStorage.setItem('all', JSON.stringify(todos))
     const onChange = ({ currentTarget: { value } }) => {
         setText(value)

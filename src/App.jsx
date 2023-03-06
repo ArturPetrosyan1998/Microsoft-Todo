@@ -5,8 +5,7 @@ import TodoListContainer from './containers/TodoListContainer'
 import TodoImportant from "../src/pages/TodoImportant/TodoImportant"
 import TodoDeleted from "../src/pages/TodoDeleted/TodoDeleted"
 import TodoComplited from './pages/TodoComplited/TodoComplited';
-function App() {
-
+const App = () => {
   return (
     <div className="App">
       <Aside />
