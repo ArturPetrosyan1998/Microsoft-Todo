@@ -1,14 +1,11 @@
 import { useSelector } from "react-redux";
-
+import { getComplited } from "../../redux/selectors/getComplited";
+import styles from "./TodoComplited.module.scss"
 const TodoComplited = () => {
-    const todos = useSelector((state) => {
-        return state.todos.filter((item) => {
-            return item.isComplited === true
-        })
-    })
+    const todos = useSelector((state) => getComplited(state))
 
     return (
-        <div>{
+        <div className={styles.container}>{
             todos.map((item) => {
                 return (
                     <h2 key={item.id}>{item.todo}</h2>

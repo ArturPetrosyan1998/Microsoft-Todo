@@ -1,0 +1,10 @@
+.container {
+    width: calc(100% - 200px);
+    height: 100vh;
+    background-image: url(/src/assets/img/windowsImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-y: scroll;
+    color: white;
+}
